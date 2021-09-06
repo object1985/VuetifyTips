@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="app">
+		<v-app>
+			<v-main>
+				<v-container>
+					<v-container grid-list-sm>
+						<v-layout row wrap>
+							<v-flex xs12 v-for="i in 2">
+								<v-card dark color="primary">
+									<v-card-text class="px-0">
+										12
+									</v-card-text>
+								</v-card>
+							</v-flex>
+						</v-layout>
+						<h1>{{hello}}</h1>
+						<v-alert type="success" :value="true">Hi</v-alert>
+						<v-alert type="info" :value="true">Hi</v-alert>
+						<v-alert type="warning" :value="true">Hi</v-alert>
+						<v-alert type="error" :value="true">Hi</v-alert>
+						<v-btn color="success">do</v-btn>
+						<v-btn color="info">do</v-btn>
+						<v-btn color="warning">do</v-btn>
+						<v-btn color="error">do</v-btn>
+						<v-toolbar>
+							<v-app-bar-nav-icon></v-app-bar-nav-icon>
+							<v-toolbar-title>Hi User</v-toolbar-title>
+							<v-space></v-space>
+						</v-toolbar>
+					</v-container>
+			</v-main>
+		</v-app>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			vuetify: new Vuetify(),
+			data() {
+				return {
+					hello: 'Hello World'
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>
